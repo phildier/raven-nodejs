@@ -7,3 +7,8 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
 depends "raven-deploy"
+
+recipe "raven-nodejs::default", "installs default nodejs version"
+recipe "raven-nodejs::install_node_10", "installs nodejs 0.10"
+recipe "raven-nodejs::install_bower", "installs bower"
+recipe "raven-nodejs::install_mocha", "installs mocha"
