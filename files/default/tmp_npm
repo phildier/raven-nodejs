@@ -12,10 +12,18 @@ mkdir -p $TMP_DIR
 
 pushd $TMP_DIR
 
+if [ "$1" == "shrinkwrap" ]; then
+	rm npm-shrinkwrap.json
+fi
+
 ln -sf $ORIG_DIR/package.json
 npm $1
 
 # Can't use archive mode cause of the permissions
 rsync --recursive --links --times node_modules $ORIG_DIR
+
+if [ -f npm-shrinkwrap.json]; then
+	cp npm-shrinkwrap.json $ORIG_DIR
+fi
 
 popd
