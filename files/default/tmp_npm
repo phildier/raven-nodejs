@@ -18,4 +18,8 @@ npm $1
 # Can't use archive mode cause of the permissions
 rsync --recursive --links --times node_modules $ORIG_DIR
 
+if [ -f npm-shrinkwrap.json]; then
+	cp npm-shrinkwrap.json $ORIG_DIR
+fi
+
 popd
