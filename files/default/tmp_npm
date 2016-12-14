@@ -12,6 +12,10 @@ mkdir -p $TMP_DIR
 
 pushd $TMP_DIR
 
+if [ "$1" == "shrinkwrap" ]; then
+	rm npm-shrinkwrap.json
+fi
+
 ln -sf $ORIG_DIR/package.json
 npm $1
 
