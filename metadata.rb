@@ -16,6 +16,7 @@ recipe "raven-nodejs::install_node_69", "installs nodejs 6.9.2"
 recipe "raven-nodejs::install_bower", "installs bower"
 recipe "raven-nodejs::install_mocha", "installs mocha"
 recipe "raven-nodejs::install_phantomjs", "installs phantomjs"
+recipe "raven-nodejs::install_jest", "installs jest"
 recipe "raven-nodejs::install_devtools", "installs development tools"
 
 attribute "raven_nodejs",
