@@ -3,5 +3,5 @@ package "node" do
 end
 
 package "nodejs" do
-	version "8.12.0-1nodesource.el7"
+	version "8.12.0-1nodesource"
 end
